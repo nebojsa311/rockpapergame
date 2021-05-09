@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Choices from "./Choices.jsx";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      moved: false,
+    };
+
+    this.move = this.move.bind(this);
+  }
+
+  move(e) {
+    if(!this.state.moved){
+      document.getElementById("rock").style.transform = "translate(0, 0)";
+      document.getElementById("paper").style.transform = "translate(0, 0)";
+      document.getElementById("scissors").style.transform = "translate(0, 0)";
+      document.getElementById(e.target.id).style.transform = "translate(0, 20vh)";
+      this.setState({ moved: !this.state.moved });
+    } else {
+      document.getElementById("rock").style.transform = "translate(0, 0)";
+      document.getElementById("paper").style.transform = "translate(0, 0)";
+      document.getElementById("scissors").style.transform = "translate(0, 0)";
+      this.setState({ moved: !this.state.moved });
+    }
+  }
+
+  render() {
+    return (
+      <div id="container">
+        <Choices move={this.move} />
+      </div>
+    );
+  }
 }
 
 export default App;
