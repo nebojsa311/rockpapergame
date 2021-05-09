@@ -8,6 +8,7 @@ class App extends React.Component {
 
     this.state = {
       moved: false,
+      choice: "None",
     };
 
     this.move = this.move.bind(this);
@@ -19,12 +20,13 @@ class App extends React.Component {
       document.getElementById("paper").style.transform = "translate(0, 0)";
       document.getElementById("scissors").style.transform = "translate(0, 0)";
       document.getElementById(e.target.id).style.transform = "translate(0, 20vh)";
-      this.setState({ moved: !this.state.moved });
+      this.setState({ moved: !this.state.moved, choice: e.target.id });
+
     } else {
       document.getElementById("rock").style.transform = "translate(0, 0)";
       document.getElementById("paper").style.transform = "translate(0, 0)";
       document.getElementById("scissors").style.transform = "translate(0, 0)";
-      this.setState({ moved: !this.state.moved });
+      this.setState({ moved: !this.state.moved, choice: "None" });
     }
   }
 
