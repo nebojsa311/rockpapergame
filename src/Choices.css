@@ -1,5 +1,7 @@
 #choicesContainer {
     display: grid;
+    position: relative;
+    top: 20vh;
     grid-template-columns: auto auto auto;
     width: 40vw;
     height: 20vh;
@@ -9,7 +11,7 @@
     align-items: center;
 }
 
-#paper {
+#PAPER {
     display: inline-block;
     border: 15px solid hsl(230, 89%, 62%);
     border-radius: 50%;
@@ -18,7 +20,7 @@
     transition-duration: 1s;
 }
 
-#scissors {
+#SCISSORS {
     display: inline-block;
     background-color: white;
     padding: 25px;
@@ -27,7 +29,7 @@
     transition-duration: 1s;
 }
 
-#rock {
+#ROCK {
     display: inline-block;
     background-color: white;
     padding: 30px;
