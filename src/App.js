@@ -25,6 +25,24 @@ class App extends React.Component {
 
     if(user === user2) {
       this.setState({ result: "IT IS A DRAW!" })
+    } else if( user === "ROCK"){
+      if (user2 === "PAPER"){
+        this.setState({ result: "YOU LOSE!", score: this.state.score - 1 });
+      } else if(user2 === "SCISSORS") {
+        this.setState({ result: "YOU WON!", score: this.state.score + 1 });
+      }
+    } else if(user === "PAPER") {
+      if(user2 === "ROCK"){
+        this.setState({ result: "YOU WON!", score: this.state.score + 1 });
+      } else if(user2 === "SCISSORS"){
+        this.setState({ result: "YOU LOSE!", score: this.state.score - 1 });
+      }
+    } else if(user === "SCISSORS") {
+      if(user2 === "PAPER") {
+        this.setState({ result: "YOU WON!", score: this.state.score + 1 });
+      } else if(user2 === "ROCK") {
+        this.setState({ result: "YOU LOSE!", score: this.state.score - 1 });
+      }
     }
   }
 

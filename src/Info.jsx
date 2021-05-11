@@ -8,7 +8,7 @@ function Info(props) {
             <p id="choiceTwo">THE HOUSE PICKED: {props.cpuChoice}</p>
             <button onClick={props.playGame}>Play</button>
             <p id="result">{props.result}</p>
-            <p id="score">{props.score}</p>
+            <p id="score">SCORE: {props.score}</p>
         </div>
     )
 }
