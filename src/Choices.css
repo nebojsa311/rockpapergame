@@ -1,9 +1,9 @@
 #choicesContainer {
     display: grid;
     position: relative;
-    top: 20vh;
+    top: 15vh;
     grid-template-columns: auto auto auto;
-    width: 40vw;
+    width: 43vw;
     height: 20vh;
     margin-left: auto;
     margin-right: auto;
@@ -36,4 +36,10 @@
     border-radius: 50%;
     border: 15px solid hsl(349, 71%, 52%);
     transition-duration: 1s;
+}
+
+@media only screen and (max-width: 1000px) {
+    #choicesContainer {
+        width: 70vw;
+    }
 }

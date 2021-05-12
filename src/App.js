@@ -17,37 +17,38 @@ class App extends React.Component {
 
     this.move = this.move.bind(this);
     this.playGame = this.playGame.bind(this);
+    this.resetScore = this.resetScore.bind(this);
   }
 
   playGame() {
     let user = this.state.choice;
     let user2 = this.state.cpuChoice;
 
-    if(user === user2) {
-      this.setState({ result: "IT IS A DRAW!" })
-    } else if( user === "ROCK"){
-      if (user2 === "PAPER"){
+    if (user === user2) {
+      this.setState({ result: "IT IS A DRAW!" });
+    } else if (user === "ROCK") {
+      if (user2 === "PAPER") {
         this.setState({ result: "YOU LOSE!", score: this.state.score - 1 });
-      } else if(user2 === "SCISSORS") {
+      } else if (user2 === "SCISSORS") {
         this.setState({ result: "YOU WON!", score: this.state.score + 1 });
       }
-    } else if(user === "PAPER") {
-      if(user2 === "ROCK"){
+    } else if (user === "PAPER") {
+      if (user2 === "ROCK") {
         this.setState({ result: "YOU WON!", score: this.state.score + 1 });
-      } else if(user2 === "SCISSORS"){
+      } else if (user2 === "SCISSORS") {
         this.setState({ result: "YOU LOSE!", score: this.state.score - 1 });
       }
-    } else if(user === "SCISSORS") {
-      if(user2 === "PAPER") {
+    } else if (user === "SCISSORS") {
+      if (user2 === "PAPER") {
         this.setState({ result: "YOU WON!", score: this.state.score + 1 });
-      } else if(user2 === "ROCK") {
+      } else if (user2 === "ROCK") {
         this.setState({ result: "YOU LOSE!", score: this.state.score - 1 });
       }
     }
   }
 
   move(e) {
-    if (!this.state.moved) {
+    if (this.state.moved) {
       document.getElementById("ROCK").style.transform = "translate(0, 0)";
       document.getElementById("PAPER").style.transform = "translate(0, 0)";
       document.getElementById("SCISSORS").style.transform = "translate(0, 0)";
@@ -71,16 +72,37 @@ class App extends React.Component {
       this.setState({
         moved: !this.state.moved,
         choice: "",
-        cpuChoice: "",
+        cpuChoice: " ",
+        result: "",
       });
     }
+    setTimeout(() => {
+      this.playGame();
+    }, 200);
+  }
+
+  resetScore() {
+    this.setState({ 
+      moved: false,
+      choice: "",
+      cpuChoice: "",
+      result: "",
+      score: 0,
+     })
   }
 
   render() {
     return (
       <div id="container">
         <Choices move={this.move} />
-        <Info choice={this.state.choice} cpuChoice={this.state.cpuChoice} playGame={this.playGame} result={this.state.result} score={this.state.score} />
+        <Info
+          choice={this.state.choice}
+          cpuChoice={this.state.cpuChoice}
+          playGame={this.playGame}
+          result={this.state.result}
+          score={this.state.score}
+          reset={this.resetScore}
+        />
       </div>
     );
   }

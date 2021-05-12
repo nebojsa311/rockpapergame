@@ -6,7 +6,7 @@ function Info(props) {
         <div id="infoWrapper">
             <p id="choiceOne">YOU PICKED: {props.choice}</p>
             <p id="choiceTwo">THE HOUSE PICKED: {props.cpuChoice}</p>
-            <button onClick={props.playGame}>Play</button>
+            <button onClick={props.reset}>Reset score</button>
             <p id="result">{props.result}</p>
             <p id="score">SCORE: {props.score}</p>
         </div>

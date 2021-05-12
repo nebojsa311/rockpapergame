@@ -7,14 +7,15 @@
     width: 40vw;
     height: 30vh;
     position: relative;
-    left: 33vw;
     top: 42vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button {
     font-size: 22px;
-    width: 7vw;
-    height: 70%;
+    width: 11vw;
+    height: 80%;
     border: none;
     border-radius: 10%;
     grid-column: 1/2;
@@ -51,4 +52,20 @@ button:hover {
     grid-column: 2/3;
     align-self: center;
     justify-self: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    #infoWrapper {
+        width:  80vw;
+    }
+
+    button {
+        width: 20vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #infoWrapper {
+        width: 100vw;
+    }
 }
