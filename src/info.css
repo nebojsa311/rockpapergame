@@ -66,6 +66,8 @@ button:hover {
 
 @media only screen and (max-width: 1200px) {
     #infoWrapper {
-        width: 100vw;
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

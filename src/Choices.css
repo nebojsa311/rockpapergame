@@ -43,3 +43,11 @@
         width: 70vw;
     }
 }
+
+@media only screen and (max-width: 600px){
+    #choicesContainer {
+        width: 100vw;
+        top: 5vh;
+        margin: 0,
+    }
+}
