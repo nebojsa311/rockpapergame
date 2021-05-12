@@ -50,4 +50,8 @@
     top: 5vh;
     margin: 0;
   }
+
+ #PAPER, #SCISSORS, #ROCK {
+   padding: 15px;
+ } 
 }
