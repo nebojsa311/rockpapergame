@@ -82,13 +82,13 @@ class App extends React.Component {
   }
 
   resetScore() {
-    this.setState({ 
+    this.setState({
       moved: false,
       choice: "",
       cpuChoice: "",
       result: "",
       score: 0,
-     })
+    });
   }
 
   render() {

@@ -1,53 +1,53 @@
 #choicesContainer {
-    display: grid;
-    position: relative;
-    top: 15vh;
-    grid-template-columns: auto auto auto;
-    width: 43vw;
-    height: 20vh;
-    margin-left: auto;
-    margin-right: auto;
-    justify-items: center;
-    align-items: center;
+  display: grid;
+  position: relative;
+  top: 15vh;
+  grid-template-columns: auto auto auto;
+  width: 43vw;
+  height: 20vh;
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
+  align-items: center;
 }
 
 #PAPER {
-    display: inline-block;
-    border: 15px solid hsl(230, 89%, 62%);
-    border-radius: 50%;
-    background-color: white;
-    padding: 25px;
-    transition-duration: 1s;
+  display: inline-block;
+  border: 15px solid hsl(230, 89%, 62%);
+  border-radius: 50%;
+  background-color: white;
+  padding: 25px;
+  transition-duration: 1s;
 }
 
 #SCISSORS {
-    display: inline-block;
-    background-color: white;
-    padding: 25px;
-    border-radius: 50%;
-    border: 15px solid hsl(39, 89%, 49%);
-    transition-duration: 1s;
+  display: inline-block;
+  background-color: white;
+  padding: 25px;
+  border-radius: 50%;
+  border: 15px solid hsl(39, 89%, 49%);
+  transition-duration: 1s;
 }
 
 #ROCK {
-    display: inline-block;
-    background-color: white;
-    padding: 30px;
-    border-radius: 50%;
-    border: 15px solid hsl(349, 71%, 52%);
-    transition-duration: 1s;
+  display: inline-block;
+  background-color: white;
+  padding: 30px;
+  border-radius: 50%;
+  border: 15px solid hsl(349, 71%, 52%);
+  transition-duration: 1s;
 }
 
 @media only screen and (max-width: 1000px) {
-    #choicesContainer {
-        width: 70vw;
-    }
+  #choicesContainer {
+    width: 70vw;
+  }
 }
 
-@media only screen and (max-width: 600px){
-    #choicesContainer {
-        width: 100vw;
-        top: 5vh;
-        margin: 0,
-    }
+@media only screen and (max-width: 600px) {
+  #choicesContainer {
+    width: 100vw;
+    top: 5vh;
+    margin: 0;
+  }
 }
